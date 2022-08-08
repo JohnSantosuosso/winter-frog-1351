@@ -30,28 +30,28 @@ RSpec.feature 'Plots', type: :feature do
     expect(page).to have_content(plot_3.number)
     
 
-    within("#plot-#{plot_1.number}") do
+    within("#plot-#{plot_1.id}") do
       expect(page).to have_content('Tomato')
       expect(page).to have_content('Potato')
       expect(page).to have_content('Carrot')
       expect(page).to have_no_content('Celery')
     end
 
-    within("#plot-#{plot_2.number}") do
+    within("#plot-#{plot_2.id}") do
       expect(page).to have_content('Celery')
       expect(page).to have_no_content('Tomato')
       expect(page).to have_no_content('Potato')
       expect(page).to have_no_content('Carrot')
     end
 
-    within("#plot-#{plot_3.number}") do
+    within("#plot-#{plot_3.id}") do
       expect(page).to have_content('Celery')
       expect(page).to have_no_content('Tomato')
       expect(page).to have_no_content('Potato')
       expect(page).to have_no_content('Carrot')
     end
 
-    within("#plot-#{plot_4.number}") do
+    within("#plot-#{plot_4.id}") do
       expect(page).to have_content('Celery')
       expect(page).to have_no_content('Tomato')
       expect(page).to have_no_content('Potato')
@@ -79,7 +79,7 @@ RSpec.feature 'Plots', type: :feature do
     
     visit '/plots'
 
-    within("#plot-#{plot_1.number}") do
+    within("#plot-#{plot_1.id}") do
       expect(page).to have_content('Tomato')
       expect(page).to have_content('Potato')
       expect(page).to have_content('Carrot')
@@ -91,7 +91,7 @@ RSpec.feature 'Plots', type: :feature do
       expect(page).to have_content('Carrot')
     end
 
-    within("#plot-#{plot_2.number}") do
+    within("#plot-#{plot_2.id}") do
       expect(page).to have_content('Tomato')
       expect(page).to have_content('Celery')
     end

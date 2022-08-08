@@ -7,6 +7,11 @@
 # library_garden.plots.create!(number: 2, size: "Small", direction: "South")
 # other_garden.plots.create!(number: 738, size: "Medium", direction: "West")
 
+Garden.destroy_all
+Plot.destroy_all
+Plant.destroy_all
+PlantPlot.destroy_all
+
 
     garden_1 = Garden.create!(name: 'My Garden', organic: true)
     garden_2 = Garden.create!(name: 'Jardin', organic: true)

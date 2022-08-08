@@ -1,8 +1,9 @@
 <h1>Plots</h1>
 
+<div id = "plots">
 <% @plots.each do |plot| %>
   <h2>Plot Number: <%= plot.number %></h2>
-  <div id= "plot_<%= plot.id %>">
+  <div id= "plot-<%= plot.id %>">
   <% plot.find_plants.each do |plant| %>
     <p><%= plant.name %></p>
     <p><%= button_to "Delete #{plant.name}", "/plots/#{plot.id}/plants/#{plant.id}", :method => :delete %></p>
