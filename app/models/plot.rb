@@ -8,7 +8,6 @@ class Plot < ApplicationRecord
   validates :direction, presence: true
 
   def find_plants
-    require 'pry'; binding.pry 
     self.plants
   end
 
