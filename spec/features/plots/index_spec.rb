@@ -28,29 +28,30 @@ RSpec.feature 'Plots', type: :feature do
     expect(page).to have_content(plot_1.number)
     expect(page).to have_content(plot_2.number)
     expect(page).to have_content(plot_3.number)
+    
 
-    within('#plot-1') do
+    within("#plot-#{plot_1.number}") do
       expect(page).to have_content('Tomato')
       expect(page).to have_content('Potato')
       expect(page).to have_content('Carrot')
       expect(page).to have_no_content('Celery')
     end
 
-    within('#plot-2') do
+    within("#plot-#{plot_2.number}") do
       expect(page).to have_content('Celery')
       expect(page).to have_no_content('Tomato')
       expect(page).to have_no_content('Potato')
       expect(page).to have_no_content('Carrot')
     end
 
-    within('#plot-3') do
+    within("#plot-#{plot_3.number}") do
       expect(page).to have_content('Celery')
       expect(page).to have_no_content('Tomato')
       expect(page).to have_no_content('Potato')
       expect(page).to have_no_content('Carrot')
     end
 
-    within('#plot-4') do
+    within("#plot-#{plot_4.number}") do
       expect(page).to have_content('Celery')
       expect(page).to have_no_content('Tomato')
       expect(page).to have_no_content('Potato')
@@ -78,21 +79,19 @@ RSpec.feature 'Plots', type: :feature do
     
     visit '/plots'
 
-    within('#plot-1') do
+    within("#plot-#{plot_1.number}") do
       expect(page).to have_content('Tomato')
       expect(page).to have_content('Potato')
       expect(page).to have_content('Carrot')
 
       click_on 'Delete Tomato'
-    end
 
-    within('#plot-1') do
       expect(page).to have_no_content('Tomato')
       expect(page).to have_content('Potato')
       expect(page).to have_content('Carrot')
     end
 
-    within('#plot-2') do
+    within("#plot-#{plot_2.number}") do
       expect(page).to have_content('Tomato')
       expect(page).to have_content('Celery')
     end
