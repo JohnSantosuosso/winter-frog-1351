@@ -4,7 +4,12 @@ class Plot < ApplicationRecord
   has_many :plants, through: :plant_plots
 
   validates :number, presence: true, numericality: { only_integer: true }
-  validates :size, presence: true, numericality: { only_integer: true }
+  validates :size, presence: true
   validates :direction, presence: true
+
+  def find_plants
+    require 'pry'; binding.pry 
+    self.plants
+  end
 
 end
