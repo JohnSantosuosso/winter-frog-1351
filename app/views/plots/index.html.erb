@@ -6,6 +6,7 @@
   <h2>Plot Number: <%= plot.number %></h2>
   <% plot.find_plants.each do |plant| %>
     <p><%= plant.name %></p>
+    <p><%= button_to "Delete #{plant.name}", "/plots/#{plot.id}/plants/#{plant.id}", :method => :delete %></p>
 <% end %>
 </div>
 <% end %>

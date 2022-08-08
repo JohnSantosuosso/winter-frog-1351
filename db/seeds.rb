@@ -26,4 +26,5 @@
     plant_plot_4 = PlantPlot.create!(plant_id: plant_4.id, plot_id: plot_2.id)
     plant_plot_5 = PlantPlot.create!(plant_id: plant_4.id, plot_id: plot_3.id)
     plant_plot_6 = PlantPlot.create!(plant_id: plant_4.id, plot_id: plot_4.id)
+    plant_plot_6 = PlantPlot.create!(plant_id: plant_1.id, plot_id: plot_2.id)
     
