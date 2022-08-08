@@ -80,6 +80,9 @@ RSpec.feature 'Plots', type: :feature do
 
     within('#plot-1') do
       expect(page).to have_content('Tomato')
+      expect(page).to have_content('Potato')
+      expect(page).to have_content('Carrot')
+
       click_on 'Delete Tomato'
     end
 
