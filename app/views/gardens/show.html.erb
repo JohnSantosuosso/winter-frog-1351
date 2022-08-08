@@ -1,0 +1,6 @@
+<h1>Garden <%=@garden.name%><h1>
+
+<h2>Garden Plants</h2>
+<%@garden.unique_plants_to_harvest.each do |plant| %>
+  <p><%= plant %></p>
+  <% end %>
