@@ -102,8 +102,6 @@ GEM
     nokogiri (1.13.8)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-darwin)
-      racc (~> 1.4)
     pg (1.4.2)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -207,7 +205,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-darwin-19
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -232,4 +229,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.2.24
+   2.1.4
